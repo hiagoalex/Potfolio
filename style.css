@@ -1,0 +1,187 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estrutura base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffffff, #ff9966); /* Gradiente de laranja para rosa claro */
+    color: #333;
+    line-height: 1.6;
+    padding-top: 60px; /* Espaço para o header fixo */
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #fdd;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background: #222;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #daa520;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Seções */
+section {
+    padding: 6rem 2rem;
+    margin-top: 60px;
+}
+
+#home {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #daa520;
+    text-align: center;
+    font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+    padding: 15rem 20rem;
+}
+
+#about, #skills, #projects, #contact {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 3rem;
+}
+
+/* Títulos das seções */
+#about h2, #skills h2, #projects h2, #contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Estilo para a seção de Habilidades */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#skills ul li {
+    background-color: #ff9966;
+    color: #fff;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    width: calc(50% - 1rem);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: #ff7f50;
+}
+
+/* Estilo dos cartões de projeto */
+.project-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #daa520;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #b8860b;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Acessibilidade */
+a:focus, button:focus {
+    outline: 2px dashed #ffd700;
+    outline-offset: 2px;
+}
